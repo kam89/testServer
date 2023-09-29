@@ -42,17 +42,17 @@ app.get("/personal/v1/getFavouritePlaceList", (request, response) => {
 
   const address2 = {
     name: "Work",
-    line1: "2",
+    line1: "1",
     line2: "Jalan 123456789",
     line3: "Taman 123456789",
     line4: null,
-    city: "Bandar Baru Bangi",
-    postcode: "43650",
+    city: "Kajang",
+    postcode: "43000",
     state: "Selangor",
     coordinate: { x: 0.1, y: 0.1 },
   };
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 1; i++) {
     list.push(address);
     list.push(address2);
   }
