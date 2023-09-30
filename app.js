@@ -13,7 +13,12 @@ app.get("/restaurant/v1/getRestaurantList", (request, response) => {
   const restaurant = {
     name: "SDS",
     coordinate: { x: 2.964994, y: 101.7721517 },
-    tags: ["Chinese", "FastFood", "Healthy"],
+    foodTags: ["Chinese", "FastFood", "Healthy"],
+    platformTags: [
+      "Free Delivery Available",
+      "Pickup Available",
+      "Order In Advance",
+    ],
     imageUrl:
       "https://sdsgroups.com/wp-content/uploads/2021/11/cropped-Asset-3-e1637812026983.png",
   };
