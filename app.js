@@ -68,11 +68,19 @@ app.get("/personal/v1/getFavouritePlaceList", (request, response) => {
 app.get("/notification/v1/getNotificationList", (request, response) => {
   let list = [];
 
+  const tags = ["System", "Order"];
+
   for (let i = 0; i < 5; i++) {
+    const randomIndex = Math.floor(Math.random() * tags.length);
+    const randomTag = tags[randomIndex];
+
     let notification = {
       title: "Your order is made!",
       subtitle: "We have received your order!",
       notificationId: i.toString(),
+      datetime: new Date(),
+      readStatus: Math.random() >= 0.5,
+      tag: randomTag,
     };
 
     list.push(notification);
