@@ -64,3 +64,19 @@ app.get("/personal/v1/getFavouritePlaceList", (request, response) => {
 
   response.send(list);
 });
+
+app.get("/notification/v1/getNotificationList", (request, response) => {
+  let list = [];
+
+  for (let i = 0; i < 5; i++) {
+    let notification = {
+      title: "Your order is made!",
+      subtitle: "We have received your order!",
+      notificationId: i.toString(),
+    };
+
+    list.push(notification);
+  }
+
+  response.send(list);
+});
