@@ -70,8 +70,13 @@ app.get("/notification/v1/getNotificationList", (request, response) => {
 
   /*
     System - system related
-    Buyer - Order made, Order received, Preparing, Out of Delivery, Completed
-    Seller - Order received, Completed
+    Buyer: 
+      Order made - Shopping Cart Checkout, 
+      Order received - Done, 
+      Preparing - Outdoor Grill, 
+      Out of Delivery - Local Shipping, 
+      Completed - Price Check
+    Seller - Order received, Completed - Price Check
   */
 
   const tags = [
