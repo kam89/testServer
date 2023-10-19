@@ -68,7 +68,20 @@ app.get("/personal/v1/getFavouritePlaceList", (request, response) => {
 app.get("/notification/v1/getNotificationList", (request, response) => {
   let list = [];
 
-  const tags = ["System", "Order"];
+  /*
+    System - system related
+    Buyer - Order made, Order received, Preparing, Out of Delivery, Completed
+    Seller - Order received, Completed
+  */
+
+  const tags = [
+    "System",
+    "Order Made",
+    "Order Received",
+    "Preparing",
+    "Delivering",
+    "Completed",
+  ];
 
   for (let i = 0; i < 5; i++) {
     const randomIndex = Math.floor(Math.random() * tags.length);
